@@ -1,79 +1,113 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+Here is the **README** for your **User Directory** app without the Markdown formatting:
 
-# Getting Started
+---
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+# User Directory App
 
-## Step 1: Start the Metro Server
+## Overview
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+The **User Directory** app fetches and displays a list of users from the **JSONPlaceholder API**. The app showcases each user's name and email on the list screen. Upon tapping a user entry, the app navigates to a detailed screen showing additional information about the user such as address, company, and more.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+This app demonstrates React Native capabilities such as API integration, navigation, state management, and clean UI/UX design principles.
 
-```bash
-# using npm
-npm start
+---
 
-# OR using Yarn
-yarn start
+## Features
+
+- **User List Screen**: Displays a list of users with their names and emails.
+- **User Details Screen**: On tapping a user, a detailed view is shown with additional user information, including their address, company, and more.
+- **Infinite Scrolling**: The user list supports infinite scrolling, dynamically fetching more users as the user scrolls down.
+- **Responsive Layout**: The app is designed to work on both small and large screens.
+- **Error Handling & Loading States**: Displays error messages if the API fails and loading indicators while data is being fetched.
+- **Smooth Navigation**: Uses React Navigation for seamless transitions between the user list and details screen.
+
+---
+
+## Screenshots
+
+*Example of the User List Screen*
+![User List Screen](./example/first.jpeg)  
+
+
+*Example of the User Details Screen*
+![User Details Screen](./example/second.jpeg)  
+---
+
+## Tech Stack
+
+- **React Native**: Framework for building the app.
+- **React Navigation**: Library used for navigating between screens.
+- **Axios**: Used for fetching data from the JSONPlaceholder API.
+- **React Native Paper**: For UI components (optional if you decide to include).
+- **React Hooks (useState, useEffect)**: Used for state management and data fetching.
+
+---
+
+## Setup Instructions
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- **Node.js** (v12 or higher)
+- **React Native CLI** or **Expo CLI**
+- **Android Studio** or **Xcode** for emulating the app
+
+### 1. Clone the Repository
+
+Clone the repository to your local machine using Git:
+
+```
+git clone https://github.com/your-username/user-directory-app.git
+cd user-directory-app
 ```
 
-## Step 2: Start your Application
+### 2. Install Dependencies
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+Run the following command to install the required packages:
 
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```
+npm install
 ```
 
-### For iOS
+### 3. Run the App
 
-```bash
-# using npm
-npm run ios
+#### For Android:
 
-# OR using Yarn
-yarn ios
+Make sure your Android emulator is running, then run:
+
+```
+npx react-native run-android
+```
+```
+4. Start Metro Bundler
+
+If the app does not automatically start, you can manually start the Metro bundler with:
+
+npx react-native start
+
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
-## Step 3: Modifying your App
+### How It Works
 
-Now that you have successfully run the app, let's modify it.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+- The app fetches the list of users from the JSONPlaceholder API using `axios`.
+- The list of users is displayed using the `FlatList` component with support for infinite scrolling. As the user scrolls down, additional users are fetched.
 
-## Congratulations! :tada:
 
-You've successfully run and modified your React Native App. :partying_face:
 
-### Now what?
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+### User Details Screen
 
-# Troubleshooting
+- When a user taps on an entry from the list, they are navigated to the **User Details** screen.
+- The screen displays detailed information such as the user's name, email, address, and company.
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
 
-# Learn More
 
-To learn more about React Native, take a look at the following resources:
+## Error Handling and Loading States
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- **Loading State**: A loading spinner is displayed while the data is being fetched from the API.
+- **Error Handling**: If the API request fails or if there is no data, an error message is shown to the user.
