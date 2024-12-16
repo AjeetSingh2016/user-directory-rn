@@ -25,11 +25,11 @@ This app demonstrates React Native capabilities such as API integration, navigat
 
 ## Screenshots
 
-*Example of the User List Screen*
+
 ![User List Screen](./example/first.jpeg)  
 
 
-*Example of the User Details Screen*
+
 ![User Details Screen](./example/second.jpeg)  
 ---
 
